@@ -1,6 +1,6 @@
 import Navbar from "../components/Navbar";
 import { Apple, Smartphone, Globe, KanbanSquare, BugPlay, Workflow  } from "lucide-react";
-import Bussiness from "../assets/Bussiness.png";
+import Bussiness from "../assets/bussiness.png";
 import Web from "../assets/web2.png";
 import Footer from "../components/Footer";
 import HeroCarousel from "../components/HeroCarousel";
