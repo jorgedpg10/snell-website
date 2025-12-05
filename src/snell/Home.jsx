@@ -4,8 +4,11 @@ import Bussiness from "../assets/bussiness.png";
 import Web from "../assets/web2.png";
 import Footer from "../components/Footer";
 import HeroCarousel from "../components/HeroCarousel";
+import { useRef } from "react";
 
 export const Home = () => {
+    const footerRef = useRef(null);
+
       const slides = [
     {
       title: "Bienvenido a la Transformación Digital",
@@ -23,10 +26,14 @@ export const Home = () => {
     },
   ];
 
+  const goToFooter = () => {
+    footerRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
 
   return (
     <>
-      <Navbar />
+      <Navbar onContactClick={goToFooter} />
 
       <HeroCarousel slides={slides} />
 
@@ -124,7 +131,7 @@ export const Home = () => {
     </div>
     </section>
 
-    <Footer />
+    <Footer ref={footerRef} />
      
     </>
   );

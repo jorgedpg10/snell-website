@@ -1,6 +1,8 @@
-export default function Footer() {
+import { forwardRef } from "react";
+
+const Footer = forwardRef(function Footer(props, ref) {
   return (
-    <footer className="bg-[#353535] text-white py-10">
+    <footer ref={ref} className="bg-[#353535] text-white py-10">
       <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-8">
 
         {/* Columna 1 */}
@@ -27,7 +29,7 @@ export default function Footer() {
         <div>
           <h3 className="text-xl font-semibold mb-4">Contacto</h3>
           <ul className="text-gray-300 space-y-2">
-            <li>✉ contacto@snell.dev</li>
+            <li>✉ admin@snell.com.ec</li>
             <li>📞 +593 991 273 373</li>
             <li>📍 Guayaquil, Ecuador</li>
           </ul>
@@ -40,4 +42,6 @@ export default function Footer() {
       </div>
     </footer>
   );
-}
+})
+
+export default Footer;
