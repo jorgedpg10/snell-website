@@ -17,7 +17,7 @@ export default function HeroCarousel({ slides, interval = 5000 }) {
   }, [interval]);
 
   return (
-    <section className="relative w-full overflow-hidden bg-gradient-to-b from-orange-300 to-white py-12">
+    <section className="relative w-full overflow-hidden bg-gradient-to-b from-orange-300 to-white h-[600px] md:h-[600px]">
       {slides.map((slide, index) => {
         const isActive = index === current;
 
@@ -25,7 +25,7 @@ export default function HeroCarousel({ slides, interval = 5000 }) {
           <div
             key={index}
             className={`absolute inset-0 flex items-center justify-center px-6 transition-opacity duration-700 ${
-              isActive ? "opacity-100 relative" : "opacity-0 pointer-events-none"
+              isActive ? "opacity-100" : "opacity-0 pointer-events-none"
             }`}
           >
             {/* Container que mantiene layout y se invierte con md:flex-row-reverse */}
@@ -50,14 +50,14 @@ export default function HeroCarousel({ slides, interval = 5000 }) {
 
               {/* Imagen */}
               <div
-                className={`flex-1 flex justify-center md:justify-end ${
+                className={`flex-1 flex justify-center ${
                   slide.reverse ? "md:justify-start" : "md:justify-end"
                 }`}
               >
                 <img
                   src={slide.image}
                   alt={slide.title}
-                  className="w-full max-w-md md:max-w-lg object-contain"
+                  className="w-full max-w-md md:max-w-lg h-auto max-h-[400px] md:max-h-[500px] object-contain"
                 />
               </div>
             </div>
