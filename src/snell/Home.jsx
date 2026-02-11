@@ -57,7 +57,7 @@ export const Home = () => {
                 <ShieldCheck size={50} className="text-[#FCA311] mx-auto mb-5" />
                 <h2 className="text-xl font-semibold text-gray-900 mb-3">Hacking Ético y Auditorías</h2>
                 <p className="text-gray-600 leading-relaxed">
-                    Detectamos vulnerabilidades antes de que sean explotadas.
+                    Detectamos Vulnerabilidades antes de que sean explotadas.
                 </p>
             </div>
             
@@ -124,7 +124,7 @@ export const Home = () => {
                 <Terminal size={45} className="text-[#FCA311] mb-5" />
                 <h2 className="text-xl font-semibold text-white mb-3">Kali Linux</h2>
                 <p className="text-gray-400 leading-relaxed">
-                    Distribución especializada para pentesting y auditorías de seguridad.
+                    Distribución especializada para Pentesting y Auditorías de seguridad.
                 </p>
             </div>
 
